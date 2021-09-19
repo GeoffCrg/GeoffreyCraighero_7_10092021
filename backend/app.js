@@ -1,20 +1,15 @@
-const helmet = require('helmet'); // Protection certaines vulnérabilités connues du web en configurant correctement les headers
-const dotenv = require('dotenv').config();/* Initialisation de dotenv (permet de masquer les données sur notre environnement de développement
-                                            (ici adresse et mot de passe de notre base de donnée.)*/
+const helmet = require('helmet'); 
+const dotenv = require('dotenv').config();
 
-const cors = require('cors'); /* contourner les erreur de CORS (Système de sécurité CORS : Cross Origin Resource Sharing  
-  La sécurité CORS est une mesure de sécurité par défaut pour empêcher 
-  l'utilisation de ressources par des origines non-autorisées.*/
+const cors = require('cors'); 
 
 const express = require('express'); // Framework pour Node.js
-// eslint-disable-next-line import/no-extraneous-dependencies
-//const bodyParser = require('body-parser'); // Parser JSON pour rendre exploitables les objets retournés
 
-const path = require('path'); // Nécessaire pour Multer (importation d'image )
+const path = require('path'); 
 
 
 
-
+const userRoutes = require('./routes/user'); 
 
 const app = express();
 
@@ -33,7 +28,7 @@ var con = mysql.createConnection({
   password: process.env.dbPassword,
 });
 
-
+app.use('/api/auth', userRoutes);
 
 
 module.exports = app;
