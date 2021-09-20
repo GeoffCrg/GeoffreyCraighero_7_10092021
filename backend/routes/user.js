@@ -8,7 +8,7 @@ const auth = require('../middleware/auth');
 //Routes utilisateurs
 
 users.post('/signup',  userCtrl.signup);
-users.post('/login',  userCtrl.rateLimit, userCtrl.login);
+users.post('/login',   userCtrl.login);
 users.delete('/delete/:id', auth, userCtrl.deleteAccount);
 users.get('/userInfo/:email', auth, userCtrl.oneUser);
 users.get('/usersInfo', auth, userCtrl.allUser); 

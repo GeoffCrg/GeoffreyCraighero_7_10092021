@@ -22,7 +22,7 @@ app.use('/images',express.static(path.join(__dirname, '/images')))
 
 var mysql = require('mysql');
 
-var con = mysql.createConnection({
+var connect = mysql.createConnection({
   host: process.env.dbHost,
   user: process.env.dbUser,
   password: process.env.dbPassword,
