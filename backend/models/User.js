@@ -1,8 +1,8 @@
-const Sequelize = require('sequelize');
-const db = require('../database/db.js');
+const Sequelize = require("sequelize");
+const db = require("../database/db.js");
 
 module.exports = db.sequelize.define(
-  'user',
+  "user",
   {
     id: {
       type: Sequelize.INTEGER,
@@ -26,13 +26,16 @@ module.exports = db.sequelize.define(
       allowNull: false,
     },
     created_date: {
-      type: 'TIMESTAMP',
-      defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+      type: "TIMESTAMP",
+      defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
       allowNull: false,
     },
     image_URL: {
       type: Sequelize.STRING,
-      defaultValue: '',
+      defaultValue: "",
     },
   },
+  {
+    timestamps: false,
+  }
 );
