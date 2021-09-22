@@ -39,8 +39,8 @@ Groupomania est un groupe souhaitant renforcer la communication entre ses salari
 * "dbhost=localhost"
 * "PORT:3000"
 
-* Lancer la commande npx sequelize-cli db:create
-* Lancer la commande npx sequelize-cli db:migrate
+* Lancer la commande npm sequelize-cli db:create
+* Lancer la commande npm sequelize-cli db:migrate
 * Lancer la commande nodemon server.
 
 ### Frontend
