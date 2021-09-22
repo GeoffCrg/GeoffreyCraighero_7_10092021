@@ -33,10 +33,11 @@ Groupomania est un groupe souhaitant renforcer la communication entre ses salari
 
 * Ouvrez le dossier backend et executer npm install pour installer les dépendances.
 * Dans le dossier backend, créer un fichier .env et intégrer les variables suivantes:
-* "DB_NAME=" suivi du nom à donner à la BDD
-* "DB_USERNAME=" suivi du nom d'utilisateur pour l'accès à la BDD
-* "DB_PASSWORD=" suivi du mot de passe lié à l'utilisateur ayant les droits d'accès à la base
-* "DB_HOST=127.0.0.1"
+* "dbName=" suivi du nom à donner à la BDD
+* "dbUser=" suivi du nom d'utilisateur pour l'accès à la BDD
+* "dbPassword=" suivi du mot de passe lié à l'utilisateur ayant les droits d'accès à la base
+* "dbhost=localhost"
+* "PORT:3000"
 
 * Lancer la commande npx sequelize-cli db:create
 * Lancer la commande npx sequelize-cli db:migrate
