@@ -40,7 +40,7 @@ exports.createPost = (req, res, next) => {
 exports.getAllPost = (req, res, next) => {
   User.findOne({ where: { id: req.user_id } })
     .then((user) => {
-      Post.findAll({
+      Post.findAll({attributes:['id','userId','title','image_URL','created_date','body'],
         include: [
           {
             model: User,
@@ -60,6 +60,7 @@ exports.getAllPost = (req, res, next) => {
       });
     })
     .catch((error) => res.status(400).json({ error }));
+    
 };
 
 //Suppression du post

@@ -25,19 +25,17 @@
       </md-card-content>
 
       <md-button
-        v-if="post.userId=!idUser"
+       v-if="post.userId === idUser"
         type="submit"
         class="md-primary"
         v-on:click="deletePost(post.id)"
         ><span class="sup">Supprimer le message</span></md-button
       >
-      
     </md-card>
   </div>
 </template>
 
 <script>
-
 export default {
   name: "allPost",
   data() {
@@ -49,6 +47,7 @@ export default {
       posts: [],
       title: "",
       body: "",
+      idUser:""
     };
   },
 
@@ -78,7 +77,6 @@ export default {
       .then((data) => (this.posts = data));
   },
   methods: {
-    
     deletePost(id) {
       async function postForm() {
         try {
@@ -92,7 +90,7 @@ export default {
           if (response.ok) {
             let responseId = await response.json();
             console.log(responseId);
-            
+
             location.reload();
           } else {
             console.error("Retour du serveur : ", response.status);
@@ -117,7 +115,6 @@ export default {
 }
 #post {
   margin-bottom: 50px;
-
 }
 .md-card {
   border-bottom: 2px double rgb(10, 1, 1);
