@@ -1,46 +1,44 @@
 <template>
-<div class="footer">
-      <div class="mentionLegal">
-        <a class="aa">Mentions légales</a>
-      </div>
-      <div class="contact">
-        <a href='mailto:groupomania@contact.com'>Contact</a>
-      </div> 
-</div>
+  <div class="footer">
+    <div class="mentionLegal">
+      <a class="aa">Mentions légales</a>
+    </div>
+    <div class="contact">
+      <a href="mailto:groupomania@contact.com">Contact</a>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'Footer',
-}
+  name: "Footer",
+};
 </script>
 
 <style scoped>
-.footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #fff;
-    font-size: 1.2rem;   
-    border-radius: 5px;
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  font-size: 1.2rem;
+  border-radius: 5px;
 }
 
-a{
-    color: black;
-    font-weight: bolder;
-    text-decoration: none;
- }
+a {
+  color: #1e81b0;
+  font-weight: bolder;
+  text-decoration: none;
+}
 
-  @media all and (max-width: 599px)
-  {
-      .footer{
-          display: flex;
-          flex-direction: column;
-    
-      }
-      a{
-        font-size:16px;
-      }      
+@media all and (max-width: 599px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
   }
+  a {
+    font-size: 16px;
+  }
+}
 </style>

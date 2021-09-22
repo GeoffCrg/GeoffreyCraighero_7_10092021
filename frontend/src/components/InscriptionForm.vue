@@ -75,7 +75,7 @@ export default {
 
 <style scoped lang="scss">
 .md-primary{
-    background-color: #024601;
+    background-color: #1e81b0;;
     color:#fff;
     font-weight: bold;
 }
@@ -83,7 +83,10 @@ label{
      color:#fff;
 }
 
-
+.md-card{
+  width: 300px;
+ box-shadow: 10px 5px 5px grey;
+}
 .md-layout{
     margin-bottom: 100px;
     margin-top: 50px;

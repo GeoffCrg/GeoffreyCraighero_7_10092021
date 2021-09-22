@@ -30,10 +30,11 @@ export default {
   align-items: center;
   background-color: #fff;
 }
-.title2 {
-  text-align: center;
-  color: rgb(252, 5, 5);
-  box-shadow: 10px 5px 5px red;
+.title2{
+    text-align: center;
+    color: #1e81b0;
+    font-size: 30px;
+    
 }
 .inscrP {
   text-align: center;

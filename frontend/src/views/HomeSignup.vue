@@ -1,7 +1,7 @@
 <template>
   <div class="headerInscr">
     <h2 class="title2">Inscription</h2>
-    <p class="inscrP">Inscription rapide et simple au forum !</p>
+    <p class="inscrP">Inscrivez vous c'est rapide !</p>
     <InscriptionForm />
   </div>
 </template>
@@ -23,16 +23,17 @@ export default {
   align-items: center;
 }
 
-.title2 {
-  text-align: center;
-  color: rgb(252, 5, 5);
-
-  box-shadow: 10px 5px 5px red;
+.title2{
+    text-align: center;
+    color: #1e81b0;
+    font-size: 30px;
+    
 }
 
 .inscrP {
   text-align: center;
   font-style: italic;
+  font-weight: 600;
 }
 
 @media all and (max-width: 599px) {

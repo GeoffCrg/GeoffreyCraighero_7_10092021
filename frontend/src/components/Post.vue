@@ -25,7 +25,6 @@
       </md-card-content>
 
       <md-button
-        v-show="post.userId == this.user.id"
         type="submit"
         class="md-primary"
         v-on:click="deletePost(post.id)"
@@ -105,11 +104,11 @@ export default {
 
 <style scoped lang="scss">
 .md-primary {
-  background-color: #000000;
-  color: rgb(248, 4, 4);
+  background-color: #b01e3d;
   font-weight: bold;
   text-align: center;
   margin-bottom: 40px;
+  border-radius: 5px;
 }
 #post {
   margin-bottom: 50px;
@@ -117,13 +116,16 @@ export default {
 }
 .md-card {
   border-bottom: 2px double rgb(10, 1, 1);
+  box-shadow: 10px 5px 5px grey;
   margin-bottom: 100px;
+  height: 600px;
 }
 .md-list-item-text {
   color: #000000;
 }
 .md-title,
 .md-body {
+  margin-top: 50px;
   color: rgb(36, 35, 35);
   font-weight: bold;
 }
@@ -136,8 +138,11 @@ span {
   font-weight: bolder;
 }
 .md-card-media img {
-  width: 70%;
-  height: 10%;
+  height: 300px;
   border-radius: 8px;
+}
+.md-card-media {
+  height: 250px;
+  width: 450px;
 }
 </style>

@@ -68,8 +68,11 @@ export default {
 </script> 
 
 <style scoped lang="scss">
+.md-card{
+    box-shadow: 10px 5px 5px grey;
+}
 .md-primary{
-    background-color: #024601;
+   
     color:#f0e8c7;
     font-weight: bold;
 }

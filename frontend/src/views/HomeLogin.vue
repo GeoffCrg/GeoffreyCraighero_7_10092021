@@ -25,13 +25,15 @@ align-items: center;
 
 .title2{
     text-align: center;
-    color: rgb(252, 5, 5);
-    box-shadow: 10px 5px 5px red;
+    color: #1e81b0;
+    font-size: 30px;
+    
 }
 
 .inscrP{
     text-align: center;
     font-style: italic;
+    font-weight: 600;
 }
 
  @media all and (max-width: 599px)

@@ -105,7 +105,9 @@ export default {
         last_name: this.last_name,
         id: this.id,
         
-        image_URL: dataForm.append("image", this.selectedImage),
+        
+        image_URL: this.selectedImage
+        
       });
 
       async function signUp(dataForm) {
@@ -123,7 +125,7 @@ export default {
           );
           if (response.ok) {
             let responseId = await response.json();
-            // window.location.href = " http://localhost:8080/signup#/profil";
+            window.location.href = " http://localhost:8080/signup#/profil";
             console.log(responseId);
           } else {
             console.error("Retour du serveur : ", response.status);

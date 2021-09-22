@@ -142,6 +142,14 @@ exports.allUser = (req, res, next) => {
 //modification  de l'utilisateur
 exports.updateUser = (req, res, next) => {
   let userObject = req.body;
+  let imagePath = "";
+  if (req.file) {
+    imagePath = `${req.protocol}://${req.get("host")}/images/${
+      req.file.filename
+    }`;
+  } else {
+    imagePath = null;
+  }
   User.update(userObject, {
     where: {
       id: req.params.id,

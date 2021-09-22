@@ -104,16 +104,21 @@ export default {
 
 <style scoped lang="scss">
 .btnValidation {
-  background-color: #024601;
+  background-color:#1e81b0 ;
   color: #f0e8c7;
-  font-weight: bold;
+  font-weight: bold;box-shadow: 10px 5px 5px grey;
 }
 form {
   width: 200%;
 }
+.md-card{
+  width: 500px;
+  box-shadow: 10px 5px 5px grey;
+  height: 250px;
+}
 .md-layout {
-  margin-bottom: 100px;
-  margin-top: 100px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 @media all and (max-width: 899px) {

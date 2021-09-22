@@ -12,6 +12,6 @@ users.post('/login',   userCtrl.login);
 users.delete('/delete/:id', auth, userCtrl.deleteAccount);
 users.get('/userInfo/:email', auth, userCtrl.oneUser);
 users.get('/usersInfo', auth, userCtrl.allUser); 
-users.put('/:id', auth,  userCtrl.updateUser);
+users.put('/:id', auth, multer,  userCtrl.updateUser);
 
 module.exports = users;
