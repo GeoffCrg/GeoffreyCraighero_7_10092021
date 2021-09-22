@@ -6,7 +6,7 @@ import UserPostView from "../views/UserPostView.vue";
 
 import UserProfil from "../views/UserProfil.vue";
 import UserMyProfil from "../views/UserMyProfil.vue";
-import UserUpdateProfil from "../views/UserUpdateProfil.vue";
+
 
 Vue.use(VueRouter);
 
@@ -37,11 +37,7 @@ const routes = [
     name: "MyProfil",
     component: UserMyProfil,
   },
-  {
-    path: "/updateuserform",
-    name: "UserUpdateForm",
-    component: UserUpdateProfil,
-  },
+
 ];
 
 const router = new VueRouter({

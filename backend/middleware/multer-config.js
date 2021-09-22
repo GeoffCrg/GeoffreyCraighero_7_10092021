@@ -4,6 +4,8 @@ const MIME_TYPES = {
   "image/jpg": "jpg",
   "image/jpeg": "jpg",
   "image/png": "png",
+  "image/gif": "gif",
+  "video/webm": "webm",
 };
 //Indique a multer ou enregistrer les fichiers
 const storage = multer.diskStorage({

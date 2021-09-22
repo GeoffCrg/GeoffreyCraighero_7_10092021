@@ -3,15 +3,18 @@
     <h2 class="title2">Profil</h2>
     <p class="inscrP">Ici, vous pouvez voir votre profil utilisateur ...</p>
     <MyProfilForm/>
+    <UserUpdateProfil/>
 </div>
 </template>
 
 <script>
 import MyProfilForm from '../components/MyProfilForm'
+import UserUpdateProfil from '../components/UserUpdateProfil.vue'
 export default {
     name: 'MyProfil',
     components: {
-    MyProfilForm
+    MyProfilForm,
+    UserUpdateProfil
     }
 }
 </script>
@@ -26,8 +29,9 @@ align-items: center;
 
 .title2{
     text-align: center;
-    color: rgb(252, 5, 5);
-    box-shadow: 10px 5px 5px red;
+    color: #1e81b0;
+    font-size: 30px;
+    
 }
 
 .inscrP{

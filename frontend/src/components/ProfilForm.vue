@@ -1,6 +1,6 @@
 <template>
 <div id="user">
-    <h3 class="manager-title font-italic">liste des users...</h3>
+    <h3 class="manager-title font-italic">liste des utilisateurs...</h3>
 
     <div class="listuser" v-for="(user, id) in users" v-bind:key="id" >  
         <div class="a">{{ user.first_name }}</div>
@@ -68,9 +68,10 @@ userForm();
 
 <style scoped lang="scss">
 .md-primary{
-    background-color: #fa0808;
+    background-color: #b01e3d;
     color:#fff;
     font-weight: bold;
+    border-radius: 5px;
 }
 .a{
     

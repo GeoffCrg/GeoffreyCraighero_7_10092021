@@ -141,20 +141,21 @@ exports.allUser = (req, res, next) => {
 
 //modification  de l'utilisateur
 exports.updateUser = (req, res, next) => {
-  let userObject = req.body;
-  let imagePath = "";
+  const user = {
+    first_name: req.body.first_name,
+    last_name: req.body.last_name,
+    
+  };
   if (req.file) {
-    imagePath = `${req.protocol}://${req.get("host")}/images/${
+    user.image_URL = `${req.protocol}://${req.get("host")}/images/${
       req.file.filename
     }`;
-  } else {
-    imagePath = null;
   }
-  User.update(userObject, {
-    where: {
-      id: req.params.id,
-    },
-  })
-    .then(() => res.status(200).json(userObject))
-    .catch((error) => res.status(400).json({ error }));
+    User.update(userObject, {
+      where: {
+        id: req.params.id,
+      },
+    })
+      .then(() => res.status(200).json(userObject))
+      .catch((error) => res.status(400).json({ error }));
 };

@@ -4,19 +4,17 @@
       <Header />
       <div class="md-primarys">
         <router-link to="/allpost"
-          ><span class="color">All post</span></router-link
+          ><span class="color">Accueil</span></router-link
         >
 
         <router-link to="/profil"
-          ><span class="color">All profil</span></router-link
+          ><span class="color">Profils</span></router-link
         >
         <router-link to="/myprofil"
-          ><span class="color">My profil</span></router-link
+          ><span class="color">Mon profil</span></router-link
         >
-        <router-link to="/updateuserform"
-          ><span class="color">Update Profil</span></router-link
-        >
-        <a href="#" v-on:click="exitUser"><span class="color">EXIT</span></a>
+
+        <a href="#" v-on:click="exitUser"><span class="color">Deconnexion</span></a>
       </div>
     </header>
 
@@ -50,6 +48,7 @@ export default {
   },
   mounted() {
     let idUser = localStorage.getItem("Id");
+    
     console.log(idUser);
     this.id = idUser;
   },

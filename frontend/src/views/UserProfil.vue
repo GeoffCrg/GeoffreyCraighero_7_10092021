@@ -2,16 +2,21 @@
 <div class="headerInscrr">
     <h2 class="title2">Profil</h2>
     <p class="inscrP">Ici, vous pouvez voir tout les profils utilisateurs ou supprimer votre compte du forum...</p>
+   
     <ProfilForm/>
+    >
 </div>
 </template>
 
 <script>
-import ProfilForm from '../components/ProfilForm'
+import ProfilForm from '../components/ProfilForm.vue'
+
+
 export default {
     name: 'Profil',
     components: {
-    ProfilForm
+    
+      ProfilForm
     }
 }
 </script>
@@ -24,9 +29,9 @@ align-items: center;
 }
 .title2{
     text-align: center;
-    color: rgb(252, 5, 5);
-
-    box-shadow: 10px 5px 5px red;
+    color: #1e81b0;
+    font-size: 30px;
+    
 }
 
 .inscrP{

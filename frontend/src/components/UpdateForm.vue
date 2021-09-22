@@ -143,7 +143,6 @@ export default {
 
 <style scoped lang="scss">
 .md-primary {
-  background-color: #cab707;
   color: #fff;
   font-weight: bold;
 }

@@ -3,11 +3,11 @@
     <h3 class="manager-title font-italic">Mon profil...</h3>
     <div class="my">
       <div class="a">
-        <span class="ok">First name:</span>
+        <span class="ok">Prénom:</span>
         <span class="ff">{{ user.first_name }}</span>
       </div>
       <div class="a">
-        <span class="ok">Last name:</span>
+        <span class="ok">Nom:</span>
         <span class="ff"> {{ user.last_name }}</span>
       </div>
       <div class="a">
@@ -50,7 +50,7 @@ export default {
 
 <style scoped lang="scss">
 .ok {
-  color: rgb(173, 29, 29);
+  color:#1e81b0 
 }
 .my {
   display: flex;

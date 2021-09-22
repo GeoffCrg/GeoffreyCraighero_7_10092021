@@ -1,6 +1,6 @@
 <template>
 <div class="headerInscr">
-    <h2 class="title2">Update profil</h2>
+    <h2 class="title2">Modification du profil</h2>
     <p class="inscrP">ici vous pouvez modifer votre profil !</p>
     <UpdateForm/>
 </div>
@@ -25,8 +25,9 @@ align-items: center;
 
 .title2{
     text-align: center;
-    color: rgb(252, 5, 5);
-    box-shadow: 10px 5px 5px red;
+    color: #1e81b0;
+    font-size: 30px;
+    
 }
 
 .inscrP{
