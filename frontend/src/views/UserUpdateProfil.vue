@@ -1,21 +1,20 @@
 <template>
 <div class="headerInscr">
-    <h2 class="title2">Créer un nouvel article</h2>
-    <p class="inscrP">Ici, vous pouvez écrire ou partager le lien d'un article qui vous intéresse...</p>
-    <CreatePostForm/>
+    <h2 class="title2">Update profil</h2>
+    <p class="inscrP">ici vous pouvez modifer votre profil !</p>
+    <UpdateForm/>
 </div>
 </template>
 
 <script>
-import CreatePostForm from '../components/CreatePostForm'
+import UpdateForm from '../components/UpdateForm'
 export default {
-    name: 'UserCreate',
+    name: 'UserUpdateForm',
     components: {
-    CreatePostForm
+    UpdateForm   
     }
 }
 </script>
-
 
 <style scoped>
 .headerInscr{
@@ -34,4 +33,11 @@ align-items: center;
     text-align: center;
     font-style: italic;
 }
+
+ @media all and (max-width: 599px)
+ {
+  .headerInscr{
+      margin-bottom:50px;
+  }   
+ }
 </style>

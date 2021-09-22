@@ -23,7 +23,9 @@
         <div class="md-body">{{ post.body }}</div>
         <div class="md-date">créer le :{{ post.created_date }}</div>
       </md-card-content>
+
       <md-button
+        v-show="post.userId == this.user.id"
         type="submit"
         class="md-primary"
         v-on:click="deletePost(post.id)"
@@ -39,6 +41,7 @@ export default {
   data() {
     return {
       user: "",
+      userId: "",
       first_name: "",
       last_name: "",
       posts: [],
@@ -52,11 +55,12 @@ export default {
     fetch("http://localhost:3000/api/posts/", {
       method: "GET",
       headers: {
-        //  'content-type': 'application/json',
+        "content-type": "application/json",
         authorization: "bearer " + localStorage.getItem("token"),
       },
     })
       .then((response) => response.json())
+
       .then((data) => (this.user = data));
   },
   mounted() {

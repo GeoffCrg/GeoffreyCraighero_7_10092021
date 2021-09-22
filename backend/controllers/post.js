@@ -7,14 +7,14 @@ const User = require("../models/User");
 
 //Creation d'un post
 exports.createPost = (req, res, next) => {
-//   let imagePath = "";
-//   if (req.file) {
-//     imagePath = `${req.protocol}://${req.get("host")}/images/${
-//       req.file.filename
-//     }`;
-//   } else {
-//     imagePath = "";
-//   }
+  let imagePath = "";
+  if (req.file) {
+    imagePath = `${req.protocol}://${req.get("host")}/images/${
+      req.file.filename
+    }`;
+  } else {
+    imagePath = "";
+  }
   const myObject = JSON.parse(req.body.post);
   console.log(myObject);
   const postObject = {
@@ -22,7 +22,7 @@ exports.createPost = (req, res, next) => {
     userId: myObject.userId, 
     title: myObject.title,
     body: myObject.body,
-    // image_URL: imagePath, 
+    image_URL: imagePath, 
  
   };
  

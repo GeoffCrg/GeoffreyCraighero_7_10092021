@@ -1,6 +1,8 @@
 <template>
   <div class="headerInscr">
     <h2 class="title2">Fil d'actualité</h2>
+   <create-post-form />
+
     <p class="inscrP">
       Ici, vous pouvez lire ce que vos collègues ont écrit ou partagé...
     </p>
@@ -9,11 +11,14 @@
 </template>
 
 <script>
+
+import CreatePostForm from "../components/CreatePostForm.vue"
 import Post from "../components/Post";
 export default {
   name: "AllPost",
   components: {
     Post,
+    CreatePostForm,
   },
 };
 </script>

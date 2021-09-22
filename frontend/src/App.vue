@@ -4,7 +4,7 @@
         <Header/>    
         <div class="md-primarys" >  
           <router-link to="/allpost"><span class="color">All post</span></router-link>
-          <router-link to="/create"><span class="color">Create post</span></router-link>  
+            
           <router-link to="/profil"><span class="color">All profil</span></router-link> 
           <router-link to="/myprofil"><span class="color">My profil</span></router-link> 
           <router-link to="/updateuserform"><span class="color">Update Profil</span></router-link> 
