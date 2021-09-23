@@ -25,6 +25,7 @@ Groupomania est un groupe souhaitant renforcer la communication entre ses salari
 ### Backend
 
 #### outils :
+mysql workebench
 * Langages:Javascript;Sql
 * Base de donées : Mysql
 * Serveur: Node.js
