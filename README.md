@@ -40,8 +40,7 @@ mysql workebench
 * "dbhost=localhost"
 * "PORT:3000"
 
-* Lancer la commande npm sequelize-cli db:create
-* Lancer la commande npm sequelize-cli db:migrate
+* Imprter dans mysql workbench les fichiers contenus dans database export
 * Lancer la commande nodemon server.
 
 ### Frontend
