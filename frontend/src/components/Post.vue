@@ -1,7 +1,6 @@
 <template>
   <div id="post">
     <h3 class="manager-title font-italic">Le coin de publication...</h3>
-
     <md-card v-for="(post, id) in posts" v-bind:key="id">
       <md-card-header>
         <md-list-item>
@@ -25,10 +24,10 @@
       </md-card-content>
 
       <md-button
-       v-if="post.userId === idUser"
+      v-if="post.userId == connectedUserId"
         type="submit"
         class="md-primary"
-        v-on:click="deletePost(post.id)"
+        v-on:click="deletePost(post.id, post.userId, connectedUserId)"
         ><span class="sup">Supprimer le message</span></md-button
       >
     </md-card>
@@ -40,29 +39,14 @@ export default {
   name: "allPost",
   data() {
     return {
-      user: "",
-      userId: "",
+      connectedUserId: localStorage.getItem("Id"),
       first_name: "",
       last_name: "",
       posts: [],
       title: "",
       body: "",
-      idUser:""
+      idUser: "",
     };
-  },
-
-  beforeMount() {
-    //Obtenir mon user
-    fetch("http://localhost:3000/api/posts/", {
-      method: "GET",
-      headers: {
-        "content-type": "application/json",
-        authorization: "bearer " + localStorage.getItem("token"),
-      },
-    })
-      .then((response) => response.json())
-
-      .then((data) => (this.user = data));
   },
   mounted() {
     //Obtenir tous les posts
@@ -77,10 +61,11 @@ export default {
       .then((data) => (this.posts = data));
   },
   methods: {
-    deletePost(id) {
+    // const connectedUserId = 'hh';
+    deletePost(postId) {
       async function postForm() {
         try {
-          let response = await fetch("http://localhost:3000/api/posts/" + id, {
+          let response = await fetch("http://localhost:3000/api/posts/" + postId, {
             method: "DELETE",
             headers: {
               "content-type": "application/json",
