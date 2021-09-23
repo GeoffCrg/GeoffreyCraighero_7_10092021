@@ -3,6 +3,7 @@ const jwt = require("jsonwebtoken"); // Token de protection
 
 const User = require("../models/User"); // Chemin d'accès au modèle USER
 
+
 //Récupération des data lors de l'inscription
 
 exports.signup = (req, res, next) => {
