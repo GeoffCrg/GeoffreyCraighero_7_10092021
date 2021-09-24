@@ -16,7 +16,9 @@ exports.signup = (req, res, next) => {
   } else {
     imagePath = null; // l'image n'est pas requise pour l'inscritpion
   }
-
+    const nameRegex = /(.*[a-z]){3,30}/;
+    const mailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+    const pwdRegex  = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/  
   const userData = {
     first_name: req.body.first_name,
     last_name: req.body.last_name,
@@ -33,6 +35,9 @@ exports.signup = (req, res, next) => {
   })
     .then((user) => {
       if (!user) {
+        nameRegex.test(req.body.first_name) &&
+          mailRegex.test(req.body.email) &&
+          pwdRegex.test(req.body.password); 
         bcrypt.hash(req.body.password, 10, (err, hash) => {
           //Bcrypt recupère le password le hash pour augmenter la sécurité
           userData.password = hash;

@@ -4,12 +4,12 @@
       <md-card class="md-layout-item md-size-50 md-small-size-100">
    
               <md-field>
-                <label for="first-name">First Name</label>
+                <label for="first-name">Prénom</label>
                 <md-input name="first-name" id="first-name" autocomplete="given-name" v-model="first_name"  />   
               </md-field>
            
               <md-field>
-                <label for="last-name">Last Name</label>
+                <label for="last-name">Nom</label>
                 <md-input name="last-name" id="last-name" autocomplete="family-name" v-model="last_name"  /> 
               </md-field>
 
@@ -19,7 +19,7 @@
           </md-field>
     
           <md-field>
-             <label for="password">Password</label>
+             <label for="password">Mot de passe</label>
              <md-input name="password" type="password" id="password" autocomplete="given-password" v-model="password"  />               
           </md-field>
            

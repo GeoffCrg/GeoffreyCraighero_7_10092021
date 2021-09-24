@@ -10,7 +10,7 @@
           </md-field>
           
           <md-field>
-                <label for="password">Password</label>
+                <label for="password">Mot de passe</label>
                 <md-input name="password" type="password" id="password" autocomplete="given-password" v-model="password"  />               
           </md-field>
         </md-card-content>
